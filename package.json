@@ -1,0 +1,18 @@
+{
+  "name": "wpassgen",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"npm run css:watch\" \"live-server .\"",
+    "css:watch": "npx @tailwindcss/cli -i ./style.css -o ./dist/output.css --watch",
+    "pretty": "prettier --write ."
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "live-server": "^1.2.2",
+    "prettier": "3.5.3"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.7",
+    "tailwindcss": "^4.1.7"
+  }
+}
