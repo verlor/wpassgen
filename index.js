@@ -22,7 +22,7 @@ function showToast(message) {
 // Copy to clipboard
 document.getElementById("copyBtn").addEventListener("click", () => {
   const password = document.getElementById("password").value;
-  //   if (!password.trim()) return;
+  if (!password.trim()) return;
 
   navigator.clipboard
     .writeText(password)
