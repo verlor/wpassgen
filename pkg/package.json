@@ -1,0 +1,15 @@
+{
+  "name": "passgen",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "passgen_bg.wasm",
+    "passgen.js",
+    "passgen.d.ts"
+  ],
+  "main": "passgen.js",
+  "types": "passgen.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
