@@ -2,7 +2,7 @@ import init, { generate_passphrase } from "./pkg/passgen.js";
 
 const loadWasm = async () => {
   await init({
-    module_path: "./pkg/passgen_bg.wasm"  ,
+    module_path: "./pkg/passgen_bg.wasm",
   });
 };
 
