@@ -1,0 +1,21 @@
+{
+  "name": "Passgen",
+  "short_name": "Passgen",
+  "description": "Human-readable Passwords Generator",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "fullscreen",
+  "theme_color": "oklch(48.8% 0.243 264.376)",
+  "background_color": "oklch(96.7% 0.003 264.542)"
+}
