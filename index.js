@@ -45,6 +45,7 @@ document.getElementById("generateBtn").addEventListener("click", () => {
     uppercase: document.getElementById("uppercase").checked,
     special_chars: document.getElementById("symbols").checked,
     random_chars: document.getElementById("randomChars").checked,
+    special_charset: document.getElementById("prefix").value,
   });
   document.getElementById("password").value = password;
 });

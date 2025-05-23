@@ -2,15 +2,18 @@
   "name": "wpassgen",
   "version": "1.0.0",
   "scripts": {
-    "dev": "concurrently \"npm run css:watch\" \"live-server .\"",
+    "build:certs": "npx mkcert create-ca && npx mkcert create-cert",
     "css:watch": "npx @tailwindcss/cli -i ./style.css -o ./dist/output.css --watch",
+    "dev": "concurrently \"npm run css:watch\" \"npm run dev:secure\"",
+    "dev:secure": "http-server . -S -C cert.crt -K cert.key -p 3000",
     "pretty": "prettier --write ."
   },
   "devDependencies": {
-    "concurrently": "^8.2.2",
-    "live-server": "^1.2.2",
-    "prettier": "3.5.3",
     "@tailwindcss/cli": "^4.1.7",
+    "concurrently": "^8.2.2",
+    "http-server": "^14.1.1",
+    "mkcert": "^1.4.4",
+    "prettier": "3.5.3",
     "tailwindcss": "^4.1.7"
   }
 }
