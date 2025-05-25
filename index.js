@@ -39,13 +39,16 @@ document.getElementById("clearBtn").addEventListener("click", () => {
 });
 
 document.getElementById("generateBtn").addEventListener("click", () => {
+  const special_charset = document.getElementById("prefix").value;
   const password = generate_passphrase({
     num_words: 3,
     replace_vowels: document.getElementById("replaceVowels").checked,
     uppercase: document.getElementById("uppercase").checked,
     special_chars: document.getElementById("symbols").checked,
     random_chars: document.getElementById("randomChars").checked,
-    special_charset: document.getElementById("prefix").value,
+    ...(special_charset && {
+      special_charset
+    }),
   });
   document.getElementById("password").value = password;
 });
